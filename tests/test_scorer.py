@@ -21,7 +21,7 @@ def test_risk_scorer_looking_away():
     assert "UNUSUAL_HEAD_POSE_LOOKING_LEFT" in violations
 
 
-def test_risk_scorer_no_face(mocker):
+def test_risk_scorer_no_face():
     # This requires mocking time or waiting; for simplicity, mock time.time
     # In a full test suite we would use pytest-mock or freezegun
     pass

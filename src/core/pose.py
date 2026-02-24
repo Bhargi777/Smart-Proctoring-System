@@ -1,12 +1,12 @@
 import cv2
-import mediapipe as mp
+from mediapipe.python import solutions as mp_solutions
 import numpy as np
 from src.utils.config import Config
 
 
 class HeadPoseEstimator:
     def __init__(self):
-        self.mp_face_mesh = mp.solutions.face_mesh
+        self.mp_face_mesh = mp_solutions.face_mesh
         self.face_mesh = self.mp_face_mesh.FaceMesh(
             min_detection_confidence=Config.MIN_DETECTION_CONFIDENCE,
             min_tracking_confidence=Config.MIN_TRACKING_CONFIDENCE,

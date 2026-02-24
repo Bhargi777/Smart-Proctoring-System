@@ -1,11 +1,11 @@
 import cv2
-import mediapipe as mp
+from mediapipe.python import solutions as mp_solutions
 from src.utils.config import Config
 
 
 class FaceDetector:
     def __init__(self):
-        self.mp_face_detection = mp.solutions.face_detection
+        self.mp_face_detection = mp_solutions.face_detection
         self.detector = self.mp_face_detection.FaceDetection(
             model_selection=1,  # 0 for short-range, 1 for full-range
             min_detection_confidence=Config.MIN_DETECTION_CONFIDENCE,

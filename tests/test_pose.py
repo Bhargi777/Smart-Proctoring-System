@@ -1,8 +1,7 @@
 from unittest.mock import MagicMock
 import numpy as np
 import sys
-
-sys.modules["mediapipe"] = MagicMock()
+sys.modules["mediapipe.python"] = MagicMock()
 
 from src.core.pose import HeadPoseEstimator
 
