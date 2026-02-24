@@ -10,6 +10,10 @@ class Config:
     MIN_DETECTION_CONFIDENCE = 0.5
     MIN_TRACKING_CONFIDENCE = 0.5
     
+    # Pose Estimation Thresholds
+    POSE_YAW_THRESHOLD = 10
+    POSE_PITCH_THRESHOLD = 10
+    
     # Proctoring Rules
     NO_FACE_TIMEOUT_SEC = 5.0
     
