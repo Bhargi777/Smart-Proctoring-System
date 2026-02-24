@@ -3,14 +3,26 @@
 A production-quality Smart AI Proctoring System using Python and OpenCV.
 
 ## Features
-- Real-time webcam monitoring
-- Face detection (MediaPipe)
-- No-face detection (>5s rule)
-- Multiple face detection
-- Head pose estimation
-- Violation logging with timestamps
-- Screenshot capture
-- Risk scoring engine
+- **Real-time monitor**: Tracks user behaviors locally in real-time.
+- **Face detection (MediaPipe)**: Extremely fast local inferencing.
+- **No-face detection (>5s rule)**: Flags if the user disappears from view.
+- **Multiple face detection**: Flags if more than one face is visible.
+- **Head pose estimation**: Calculates yaw and pitch of the face to estimate view direction.
+- **Violation logging**: JSON based structured logs.
+- **Screenshot capture**: Local proof generation.
+- **Risk scoring engine**: Accumulates a risk score based on configured penalties.
+
+## System Architecture
+
+The project features a highly modular structure.
+
+```
+├── src/
+│   ├── core/      # ML models and business rules
+│   └── utils/     # Helpers for I/O and capture
+├── requirements/  # Split configurations
+└── tests/         # Unit test suite
+```
 
 ## Environment Setup
 
@@ -41,4 +53,9 @@ pip install -r requirements/dev.txt
 
 # Advanced AI features (optional)
 pip install -r requirements/optional.txt
+```
+
+### 4. Run App
+```bash
+python -m src.main
 ```
