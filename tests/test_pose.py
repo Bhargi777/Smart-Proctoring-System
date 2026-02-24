@@ -2,13 +2,15 @@ from unittest.mock import MagicMock
 import numpy as np
 import sys
 
-sys.modules['mediapipe'] = MagicMock()
+sys.modules["mediapipe"] = MagicMock()
 
 from src.core.pose import HeadPoseEstimator
+
 
 def test_head_pose_estimator_initialization():
     pose = HeadPoseEstimator()
     assert pose.face_mesh is not None
+
 
 def test_head_pose_returns_forward_for_blank_image():
     pose = HeadPoseEstimator()

@@ -3,13 +3,15 @@ import numpy as np
 import sys
 
 # Mock mediapipe before importing the module that relies on it
-sys.modules['mediapipe'] = MagicMock()
+sys.modules["mediapipe"] = MagicMock()
 
 from src.core.detector import FaceDetector
+
 
 def test_face_detector_initialization():
     detector = FaceDetector()
     assert detector.detector is not None
+
 
 def test_detect_no_face_in_blank_image():
     detector = FaceDetector()
